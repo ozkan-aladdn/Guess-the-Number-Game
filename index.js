@@ -1,5 +1,6 @@
 let minNumber = 1;
 let maxNumber = 100;
+let toGuess = 5;
 
 // Dom ile seçelim
 const inputNumber = document.getElementById("inputNumber");
@@ -19,7 +20,6 @@ console.log(random);
 
 //  Sayfa yüklendiğinde ilk olacaklar
 body.onload = function () {
-  // randomNumber();
   inputNumber.focus();
 };
 
@@ -27,20 +27,27 @@ body.onload = function () {
 check.addEventListener("click", () => {
   let number = inputNumber.value; //input içindeki value değerini kullanmak için aldık.
 
-  if (isNaN(number) || number < minNumber || number > maxNumber) {
-    info(`Please enter a number between ${minNumber} and ${maxNumber}`);
-  } else if (number < random) {
-    info(`Greater than ${number}`);
+  inputNumber.focus();
+
+  if (number == random) {
+    info(`Congratulation! You have ${toGuess} guesses left`, "green");
+  } else if (isNaN(number) || number < minNumber || number > maxNumber) {
+    info(`Please enter a number between ${minNumber} and ${maxNumber}`, "red");
   } else if (number > random) {
-    info(`Less than ${number}`);
-  } else if (number == random) {
-    info(`Congratulation!`);
+    toGuess -= 1;
+    info(`Less than ${number}. You have ${toGuess} guesses left`, "red");
+    toGuess === 0 ? info("Game over. Restart the game ") : null;
+  } else if (number < random) {
+    toGuess -= 1;
+    info(`Greater than ${number}. You have ${toGuess} guesses left`, "red");
+    toGuess === 0 ? info("Game over. Restart the game ") : null;
   }
 });
 
 /* ---------------------------------- */
 
 // mesaj fonksiyonu
-function info(msj) {
+function info(msj, color) {
   scrennMessage.textContent = msj;
+  scrennMessage.style.color = color;
 }
