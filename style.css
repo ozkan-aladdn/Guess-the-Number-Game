@@ -9,28 +9,28 @@ body {
   height: 100vh;
   background-image: url(./img/lamba.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
   position: relative;
+  background-size: cover;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  align-items:start;
-  margin-left: 5rem;
+  align-items: start;
+  flex-wrap: wrap;
   gap: 3rem;
   color: white;
   padding: 6rem;
   font-size: larger;
-  
 }
 
 h1 {
   color: rgb(238, 210, 25);
 }
-.guess{
-    display: flex;
-    gap: 1rem;
+.guess {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 #inputNumber {
@@ -46,13 +46,12 @@ input::-webkit-inner-spin-button {
   padding: 1rem;
   background-color: rgb(238, 210, 25);
 }
-#restart{
+#restart {
   padding: 1rem;
   background-color: rgb(238, 210, 25);
 }
 .message {
   font-size: 1.5rem;
   background-color: white;
-  width: 30rem;
   text-align: center;
 }

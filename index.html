@@ -8,26 +8,23 @@
   </head>
   <body>
     <div class="container">
-      <h1>
-        Find The Number (between <span class="minNumber">0</span> and
-        <span class="maxNumber">100</span>)
-      </h1>
+      <h1>Find The Number (between 0 and 100)</h1>
 
       <div class="guess">
-        <input min="1" max="100"
+        <input
+          min="1"
+          max="100"
           type="number"
           id="inputNumber"
           placeholder="Enter your guess..."
         />
         <button type="submit" id="check-btn">CHECK</button>
         <button type="submit" id="restart">RESTART</button>
-
       </div>
-      
-      <div> 
+
+      <div>
         <p class="message"></p>
       </div>
-     
     </div>
 
     <script src="./index.js"></script>
