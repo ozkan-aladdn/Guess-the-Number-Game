@@ -58,3 +58,6 @@ function info(msj, color) {
   scrennMessage.style.color = color;
 }
 
+restart.onclick = ()=>{
+  window.location.reload();
+}
