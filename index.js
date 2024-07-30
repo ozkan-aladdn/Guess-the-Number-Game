@@ -8,6 +8,8 @@ console.log(inputNumber);
 const check = document.getElementById("check-btn");
 const scrennMessage = document.querySelector(".message");
 const body = document.querySelector("body");
+const restart= document.getElementById("restart")
+
 
 //Random  sayı fonksiyonu
 function randomNumber() {
@@ -55,3 +57,4 @@ function info(msj, color) {
   scrennMessage.textContent = msj;
   scrennMessage.style.color = color;
 }
+
