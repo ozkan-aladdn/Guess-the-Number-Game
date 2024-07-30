@@ -36,11 +36,15 @@ check.addEventListener("click", () => {
   } else if (number > random) {
     toGuess -= 1;
     info(`Less than ${number}. You have ${toGuess} guesses left`, "red");
-    toGuess === 0 ? info(`Game over. Restart the game. The number was ${random}`) : null;
+    toGuess === 0
+      ? info(`Game over. Restart the game. The number was ${random}`)
+      : null;
   } else if (number < random) {
     toGuess -= 1;
     info(`Greater than ${number}. You have ${toGuess} guesses left`, "red");
-    toGuess === 0 ? info(`Game over. Restart the game. The number was ${random}`) : null;
+    toGuess === 0
+      ? info(`Game over. Restart the game. The number was ${random}`)
+      : null;
   }
 });
 
