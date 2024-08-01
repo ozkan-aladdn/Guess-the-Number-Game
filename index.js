@@ -31,22 +31,32 @@ check.addEventListener("click", () => {
   if (number == random) {
     info(`Congratulation!`, "green");
     check.disabled = true;
+    inputNumber.value = "";
+    
   } else if (isNaN(number) || number < minNumber || number > maxNumber) {
     info(`Please enter a number between ${minNumber} and ${maxNumber}`, "red");
+    inputNumber.value = "";
+
+
+
   } else if (number > random) {
     toGuess--;
     info(`Less than ${number}. You have ${toGuess} guesses left`, "red");
+    inputNumber.value = "";
 
     if (toGuess === 0) {
       info(`Game over. Restart the game. The number was ${random}`);
       check.disabled = true;
+      inputNumber.value = "";
     }
   } else if (number < random) {
     toGuess--;
     info(`Greater than ${number}. You have ${toGuess} guesses left`, "red");
+    inputNumber.value = "";
     if (toGuess === 0) {
       info(`Game over. Restart the game. The number was ${random}`);
       check.disabled = true;
+      inputNumber.value = "";
     }
   }
 });
