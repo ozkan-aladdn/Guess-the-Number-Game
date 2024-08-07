@@ -18,9 +18,9 @@ body {
   flex-direction: column;
   align-items: start;
   flex-wrap: wrap;
-  gap: 3rem;
+  gap: 6rem;
   color: white;
-  padding: 6rem;
+  padding: 3rem;
   font-size: larger;
 }
 

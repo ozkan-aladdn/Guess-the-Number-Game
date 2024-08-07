@@ -62,7 +62,7 @@ check.addEventListener("click", () => {
 });
 
 restart.onclick = () => {
-  // window.location.reload();
+  
   toGuess = 10;
   random = randomNumber();
   check.disabled = false;
